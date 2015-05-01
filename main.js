@@ -1,6 +1,7 @@
 var Randoms = require('./randoms');
-var randoms = new Randoms();
+var Printer = require('./print');
 
-randoms.on('data', function (chunk) {
-	console.log(chunk.toString());
-})
+var randoms = new Randoms();
+var printer = new Printer();
+
+randoms.pipe(printer);
