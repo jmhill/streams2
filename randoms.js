@@ -14,7 +14,7 @@ util.inherits(Randoms, stream.Readable);
 
 Randoms.prototype._read = function () {
 	var number = (Math.floor(Math.random() * 1000)).toString();
-	var buffer = new Buffer(number, 'utf8');
+	var buffer = new Buffer(number);
 	this.push(buffer);
 	this._index++;
 	if (this._index === this._limit) {
