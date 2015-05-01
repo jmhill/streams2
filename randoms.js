@@ -1,9 +1,12 @@
 var stream = require('stream');
 var util = require('util');
 
+// Randoms takes an additional key in the options object
+// that gives the number of random numbers to return
+
 function Randoms (options) {
 	stream.Readable.call(this, options);
-	this._limit = 30;
+	this._limit = options.limit || 20;
 	this._index = 0;
 }
 
