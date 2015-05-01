@@ -1,9 +1,9 @@
 var stream = require('stream');
 var util = require('util');
 
-function Randoms (limit) {
-	stream.Readable.call(this);
-	this._limit = limit;
+function Randoms (options) {
+	stream.Readable.call(this, options);
+	this._limit = 30;
 	this._index = 0;
 }
 
