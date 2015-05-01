@@ -6,4 +6,4 @@ var randoms = new Randoms({ limit: 30 });
 var printer = new Printer();
 var lessThan = new LessThan();
 
-randoms.pipe(lessThan.pipe(printer));
+randoms.pipe(lessThan).pipe(printer);
