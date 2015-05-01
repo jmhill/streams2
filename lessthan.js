@@ -14,6 +14,8 @@ LessThan.prototype._transform = function (chunk, encoding, callback) {
 		number = number.toString();
 		var buffer = new Buffer(number);
 		this.push(number);
+	} else {
+		console.log("Number was less than 100");
 	}
 	callback();
 };
