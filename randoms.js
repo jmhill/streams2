@@ -4,7 +4,7 @@ var util = require('util');
 function Randoms (limit) {
 	stream.Readable.call(this);
 	this._limit = limit;
-	this._index = 1;
+	this._index = 0;
 }
 
 util.inherits(Randoms, stream.Readable);
