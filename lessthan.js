@@ -13,7 +13,7 @@ LessThan.prototype._transform = function (chunk, encoding, callback) {
 	if (number > 99) {
 		number = number.toString();
 		var buffer = new Buffer(number);
-		this.push(number);
+		this.push(buffer);
 	} else {
 		console.log("Number was less than 100");
 	}
