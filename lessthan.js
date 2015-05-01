@@ -11,9 +11,11 @@ LessThan.prototype._transform = function (chunk, encoding, callback) {
 	var number = parseInt(chunk.toString(), 10);
 	console.log("LessThan called");
 	if (number > 99) {
-		console.log("Number", number);
-		return;
+		number = number.toString();
+		var buffer = new Buffer(number);
+		this.push(number);
 	}
+	callback();
 };
 
 module.exports = LessThan;
